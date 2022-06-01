@@ -1,0 +1,21 @@
+<div id="fTelnetContainer" class="fTelnetContainer"></div>
+<script>document.write('<script src="//embed-v2.ftelnet.ca/js/ftelnet-loader.norip.xfer.js?v=' + (new Date()).getTime() + '"><\/script>');</script>
+<script>
+    var Options = new fTelnetOptions();
+    Options.BareLFtoCRLF = false;
+    Options.BitsPerSecond = 57600;
+    Options.ConnectionType = 'telnet';
+    Options.Emulation = 'ansi-bbs';
+    Options.Enter = '\r';
+    Options.Font = 'CP437';
+    Options.ForceWss = false;
+    Options.Hostname = '192.168.2.10';
+    Options.LocalEcho = false;
+    Options.NegotiateLocalEcho = true;
+    Options.Port = 16969;
+    Options.ScreenColumns = 80;
+    Options.ScreenRows = 25;
+    Options.SendLocation = true;
+    var fTelnet = new fTelnetClient('fTelnetContainer', Options);
+    fTelnet.Connect();
+</script>
