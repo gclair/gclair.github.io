@@ -3,19 +3,18 @@
 <script>
     var Options = new fTelnetOptions();
     Options.BareLFtoCRLF = false;
-    Options.BitsPerSecond = 57600;
+    Options.BitsPerSecond = 19200;
     Options.ConnectionType = 'telnet';
     Options.Emulation = 'ansi-bbs';
     Options.Enter = '\r';
     Options.Font = 'CP437';
     Options.ForceWss = false;
-    Options.Hostname = '192.168.2.10';
+    Options.Hostname = 'empire-bbs.duckdns.org';
     Options.LocalEcho = false;
-    Options.NegotiateLocalEcho = true;
-    Options.Port = 16969;
+    Options.NegotiateLocalEcho = false;
+    Options.Port = 56969;
     Options.ScreenColumns = 80;
-    Options.ScreenRows = 25;
-    Options.SendLocation = true;
+    Options.ScreenRows = 30;
+    Options.SendLocation = false;
     var fTelnet = new fTelnetClient('fTelnetContainer', Options);
-    fTelnet.Connect();
 </script>
